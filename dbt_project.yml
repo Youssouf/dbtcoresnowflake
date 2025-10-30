@@ -5,6 +5,14 @@
 name: 'dbtsnowflake'
 version: '1.0.0'
 
+on-run-start:
+  - "use role ACCOUNTADMIN"
+  - "use warehouse COMPUTE_WH"
+  - "use database BTC"
+  - "use schema BTC_DEMO"
+
+
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'dbtsnowflake'
 
